@@ -1,12 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <div class="top">
+        <div style="float: right;">
+            登录&nbsp; | &nbsp;注册
+        </div>
+    </div>
+
+    <div class="header">
+        <div>
+            <img src="./image/logo.png" alt="">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="魔兽世界">
+            <button class="search-button"><img class="search-icon" src="./image/search.png" alt=""></button>
+            <div class="search-bottom">
+                <span>黎明之海</span>
+                <span class="item">剑网3缘起</span>
+                <span class="item">怀旧频道</span>
+                <span class="item">开局送赵云</span>
+            </div>
+        </div>
+        <div class="header-r">
+            <div> <img src="./image/header-r.png" alt=""></div>
+            <div> <span>一起一起上</span></div>
+        </div>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-main">
+            <div class="nav-m_l">
+                <div>质询中心</div>
+                <div class="m-l_20">新游戏·今日开服</div>
+                <div class="m-l_20">游戏下载</div>
+                <div class="m-l_20">发号平台</div>
+                <div class="m-l_20">有料社区</div>
+                <div class="m-l_20">17173影视</div>
+                <div class="m-l_20">17173视频</div>
+                <div class="m-l_20">新页游·开测·开服</div>
+            </div>
+            <div class="mav-m_middle"></div>
+            <div class="nav-m_r">
+                <div class="m-l_20">H5小游戏</div>
+                <div class="m-l_20">网页游戏</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <div class="wrap">
+1
+    </div> -->
 </body>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        border-bottom: 3px solid #ffcd00;
+        width: 100%;
+    
+    }
+
+    .nav-main{
+        margin: 0 auto;
+        width: 70%;
+        display: flex;
+        padding: 0;
+    }
+
+    .nav-m_l{
+        width: 90%;
+        display: flex;
+        padding: 10px 0;
+    }
+
+    .m-l_20{
+        margin-left:20px;
+    }
+
+    .mav-m_middle{
+        width: 12%;
+    }
+    .nav-m_r{
+        display: flex;
+        width: 20%;
+        padding: 10px 0;
+    }
+
+ 
+    .top {
+        width: 70%;
+        margin: 0 auto;
+        height: 20px;
+        font-size: 12px;
+        color: rgb(131, 131, 131);
+        margin-top: 5px;
+    }
+
+    .header {
+        margin: 0 auto;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        margin-top: 10px;
+    }
+
+    .header .header-r img {
+        width: 35px;
+        height: 39px;
+
+    }
+
+    .header .header-r {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: rgb(105, 105, 105);
+        gap: 10px;
+    }
+
+    .header .search input {
+        width: 320px;
+        height: 35px;
+        text-indent: 5px;
+        border-radius: 2px;
+        border: 1.5px solid #ffcd00;
+        outline: none;
+    }
+
+    .header .search .search-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .search-button {
+        position: relative;
+        top: 3.5px;
+        left: -5px;
+        width: 55px;
+        height: 40px;
+        background: #ffcd00;
+        border: none;
+    }
+
+    .search-bottom .item{
+      margin-left: 3px;
+    }
+
+    .search-bottom{
+        margin-top: 5px;
+        font-size: 11px;
+    }
+
+    .wrap {
+        margin: 0 auto;
+        width: 70%;
+    }
+</style>
+
 </html>
