@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./index.js"></script>
 </head>
+<link rel="stylesheet" href="./css/index.css">
 
 <body>
-
     <div class="top">
         <div style="float: right;">
             登录&nbsp; | &nbsp;注册
@@ -21,7 +22,7 @@
             <img src="./image/logo.png" alt="">
         </div>
         <div class="search">
-            <input type="text" placeholder="魔兽世界">
+            <input class="header-search" type="text" placeholder="">
             <button class="search-button"><img class="search-icon" src="./image/search.png" alt=""></button>
             <div class="search-bottom">
                 <span>黎明之海</span>
@@ -56,121 +57,501 @@
         </div>
     </nav>
 
-    <!-- <div class="wrap">
-1
-    </div> -->
-</body>
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
+    <div class="wrap">
 
-    .nav {
-        border-bottom: 3px solid #ffcd00;
-        width: 100%;
+        <div class="nav-advertisement">
+            <div class="">排行榜</div>
+            <div class="item">找游戏</div>
+            <div class="item">游戏测评</div>
+            <div class="item">新游测评表</div>
+            <div class="item">怀旧服测试表</div>
+            <div class="item">过审游戏</div>
+            <div class="item">/</div>
+            <div class="item">100%拿周边</div>
+            <div class="item">/</div>
+            <div class="item">有偿试玩</div>
+            <div class="item">/</div>
+            <div class="item">鉴赏家</div>
+            <div class="item">/</div>
+            <div class="item">次世代</div>
+            <div class="item">/</div>
+            <div class="item">元宇宙</div>
+            <div class="item">/</div>
+            <div class="item">更多?</div>
+            <div class="item">今日测试:</div>
+            <div class="item">
+                <span class="item-3">3</span>
+                <span class="nav-advertisement_title">款游戏</span>
+            </div>
+        </div>
+
+        <div class="advertisement">
+            <img src="./image/advertisement-left.png">
+            <div>&nbsp;</div>
+            <img src="./image/advertisement-right.png">
+        </div>
+
+        <div class="wrap-search">
+
+            <div class="wrap-search_left">
+               <div class="w-sl_item">
+                </div>
+            </div>
+
+            <div class="wrap-search_right">
+                <div>
+                    <input type="text" placeholder="传奇之梦" name="" id="">
+                </div>
+                <div class="flex-center">
+                    <img src="./image/add.png" alt="">
+                    &nbsp;
+                    <span class="add-game">添加游戏</span>
+                </div>
+            </div>
+        </div>
+             
+
+            <div class="game-collection_main">
+               
+                <div class="collection_remen">
+
+                    <div class="game-collection">
+                        <div class="game-collection_first">
+                            <span class="game-collection_first"></span>
+                        </div>
+                        <div class="game-collection_row">
+                            <div class="game-cr_itme"></div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="game-collection">
+                        <div>
+                            <span class="game-collection_first">经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;典</span>
+                        </div>
+                        <div class="game-collection_row">
+                            <div class="game-cr_itme">地下城勇士</div>
+                            <div class="game-cr_itme">800%超爆单职业</div>
+                            <div class="game-cr_itme">魔兽世界</div>
+                            <div class="game-cr_itme">梦幻西游</div>
+                            <div class="game-cr_itme">魔域</div>
+                            <div class="game-cr_itme">奇迹mu</div>
+                            <div class="game-cr_itme">剑灵</div>
+                            <div class="game-cr_itme">热血江湖</div>
+                            <div class="game-cr_itme font-f35e2d">笑傲江湖高清夫</div>
+                            <div class="game-cr_itme">剑网三</div>
+                            <div class="game-cr_itme">英雄联盟</div>
+                        </div>
+                    </div> -->
+            
+            
+                    <!-- <div class="game-collection">
+                        <div>
+                            <span class="game-collection_first">爆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;款</span>
+                        </div>
+                        <div class="game-collection_row">
+                            <div class="game-cr_itme">开局招火凤</div>
+                            <div class="game-cr_itme">流放之路</div>
+                            <div class="game-cr_itme">传奇4</div>
+                            <div class="game-cr_itme">失落的泛舟</div>
+                            <div class="game-cr_itme">失落的泛舟</div>
+                            <div class="game-cr_itme">神佑释放</div>
+                            <div class="game-cr_itme font-f35e2d">永恒之塔</div>
+                            <div class="game-cr_itme">天龙八部荣耀版</div>
+                        </div>
+                    </div>
+            
+                    <div class="game-collection">
+                        <div>
+                            <span class="game-collection_first">玩家好评</span>
+                        </div>
+                        <div class="game-collection_row">
+                            <div class="game-cr_itme">暗黑；不朽</div>
+                            <div class="game-cr_itme">镇魂街:天生为王</div>
+                            <div class="game-cr_itme">梦幻新诛仙</div>
+                            <div class="game-cr_itme">宝可梦大集结</div>
+                            <div class="game-cr_itme">剑网3缘起</div>
+                            <div class="game-cr_itme">渡神劫</div>
+                            <div class="game-cr_itme font-f35e2d">超激斗梦境</div>
+                            <div class="game-cr_itme">黄他</div>
+                        </div>
+                    </div>
+            
+                    <div class="game-collection">
+                        <div>
+                            <span class="game-collection_first">唤回青春</span>
+                        </div>
+                        <div class="game-collection_row">
+                            <div class="game-cr_itme">永恒之塔怀旧</div>
+                            <div class="game-cr_itme">热血传奇怀旧版</div>
+                            <div class="game-cr_itme">征途怀旧</div>
+                            <div class="game-cr_itme">永恒之塔怀旧</div>
+                            <div class="game-cr_itme">热血传奇怀旧版</div>
+                            <div class="game-cr_itme">征途怀旧</div>
+                            <div class="game-cr_itme">奇迹世界怀旧</div>
+                            <div class="game-cr_itme">传奇世界时长版</div>
+                            <div class="game-cr_itme font-f35e2d">魔兽换就</div>
+                            <div class="game-cr_itme">永恒之塔</div>
+                            <div class="game-cr_itme">天龙八部荣耀版</div>
+                            <div class="game-cr_itme">元神</div>
+                            <div class="game-cr_itme">逆水寒</div>
+                            <div class="game-cr_itme">元神</div>
+                            <div class="game-cr_itme">逆水寒</div>
+                        </div>
+                    </div>
+            
+                    <div class="game-collection">
+                        <div>
+                            <span class="game-collection_first">近期可玩</span>
+                        </div>
+                        <div class="game-collection_row">
+                            <div class="game-cr_itme">开局招火凤</div>
+                            <div class="game-cr_itme">流放之路</div>
+                            <div class="game-cr_itme">传奇4</div>
+                            <div class="game-cr_itme font-f35e2d"">失落的泛舟</div>
+                            <div class=" game-cr_itme">神佑释放</div>
+                            <div class="game-cr_itme">1.76上班族高爆传奇</div>
+                            <div class="game-cr_itme font-f35e2d"">永恒之塔</div>
+                            <div class=" game-cr_itme">天龙八部荣耀版</div>
+                            <div class="game-cr_itme">失落的泛舟</div>
+                            <div class="game-cr_itme">神佑释放</div>
+                        </div>
+                    </div>
+            
+            
+                    <div class="game-collection">
+                        <div>
+                            <span class="game-collection_first">页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;游</span>
+                        </div>
+                        <div class="game-collection_row">
+                            <div class="game-cr_itme">开局招火凤</div>
+                            <div class="game-cr_itme">流放之路</div>
+                            <div class="game-cr_itme">传奇4</div>
+                            <div class="game-cr_itme">失落的泛舟</div>
+                            <div class="game-cr_itme">神佑释放</div>
+                            <div class="game-cr_itme">1.76上班族高爆传奇</div>
+                            <div class="game-cr_itme">永恒之塔</div>
+                            <div class="game-cr_itme">天龙八部荣耀版</div>
+                            <div class="game-cr_itme">元神</div>
+                            <div class="game-cr_itme">逆水寒</div>
+                            <div class="game-cr_itme">破晓传说</div>
+                        </div>
+                </div>        -->
+                </div>
+                <div class="display-none">
+                    新游
+                </div>
     
-    }
+                <div class="display-none">
+                    手游
+                </div>
+    
+                <div class="display-none">
+                    页游
+                </div>
+    
+                <div class="display-none">
+                    按A-Z
+                </div>
+                
+            </div>
 
-    .nav-main{
-        margin: 0 auto;
-        width: 70%;
-        display: flex;
-        padding: 0;
-    }
+          
+         
 
-    .nav-m_l{
-        width: 90%;
-        display: flex;
-        padding: 10px 0;
-    }
 
-    .m-l_20{
-        margin-left:20px;
-    }
+        <div class="more-game font-f35e2d">
+            <span>更多游戏请点击展开(72款) ></span>
+        </div>
 
-    .mav-m_middle{
-        width: 12%;
-    }
-    .nav-m_r{
-        display: flex;
-        width: 20%;
-        padding: 10px 0;
-    }
 
- 
-    .top {
-        width: 70%;
-        margin: 0 auto;
-        height: 20px;
-        font-size: 12px;
-        color: rgb(131, 131, 131);
-        margin-top: 5px;
+        <div class="banner">
+            <img src="./image/banner.png" alt="">
+        </div>
+
+
+        <div class="main-middle">
+            <div class="main-middle_left">
+                <img class="main-middle-gif" src="./image/main-middle.gif" alt="">
+                <div class="game-video">
+                    <div class="game-video-y">
+                        <span class="font-s"></span>
+                        游戏视频
+                    </div>
+                    <div class="font-size12">
+                        <img class="phone" src="./image/phone.png" alt="">
+                        APP看视频更方便
+                    </div>
+                    <div class="font-size12">
+                        更多视频
+                        <img class="main-middle-xx" src="./image/main-middle-xx.png" alt="">
+                    </div>
+                </div>
+
+                <div class="game-video_img">
+                    <div class="game-vimg_box">
+                        <img src="./image/game-video1.png" alt="">
+                        <br>《桃花源记》CG
+                    </div>
+                    <div class="game-vimg_box">
+                        <img src="./image/game-video2.png" alt="">
+                        <br>《流放之路》新资料片“卡兰德拉湖”宣传片
+                    </div>
+                </div>
+
+                <div class="game-video_img">
+                    <div class="game-vimg_box">
+                        <img src="./image/game-video3.png" alt="">
+                        <br>《明日方舟》“前航远歌”闪灵手办开启预售
+                    </div>
+                    <div class="game-vimg_box">
+                        <img src="./image/game-video4.png" alt="">
+                        <br>《Apex英雄》Vantage狙击能力宣传片
+                    </div>
+                </div>
+
+                <div class="game-video_bottom">
+                    <div>
+                        <ul class="main-middle-b">
+                            <li><img src="./image/main-middle-b.png" alt="">《Project L》开发日志</li>
+                            <li><img src="./image/main-middle-b.png" alt="">《黑道圣徒：重启版》演示</li>
+                            <li><img src="./image/main-middle-b.png" alt="">《群雄逐鹿》试玩</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="main-middle-b">
+                            <li><img src="./image/main-middle-b.png" alt="">《哥谭骑士》蝙蝠女实机</li>
+                            <li><img src="./image/main-middle-b.png" alt="">《无悔华夏》试玩CG</li>
+                            <li><img src="./image/main-middle-b.png" alt="">《高能手办团》试玩</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-middle_m">
+                <div class="main-mille-mtop">
+                    <div class="main-mille-j">今日要闻</div>
+                    <div>游戏X博士<img class="main-middle-xx" src="./image/main-middle-xx.png"
+                            alt="">&nbsp;&nbsp;&nbsp;&nbsp;正经游戏<img class="main-middle-xx"
+                            src="./image/main-middle-xx.png" alt=""></div>
+                </div>
+                <div class="hotspot-forecast font-red">
+                    <span class="font-13style"> 热点预告：网易腾讯开辟塔科夫新战场</span>
+                </div>
+                <span class="font-13 "><span class=" font-13style">《永恒之塔》怀旧版2.0 </span> | <span
+                        class=" font-13style">新作《绝区零》首测</span> | <span class=" font-13style">《仙剑奇侠传7》新预告</span> </span>
+
+                <div class="hotspot-forecast font-red">
+                    <span class="font-13style">8月国产网络游戏审批信息公布！！</span>
+                </div>
+                <span class="font-13"><span class=" font-13style">69款游戏过审</span> | <span
+                        class=" font-13style">两款端游喜提版号</span> | <span class=" font-13style">《波西亚时光》</span></span>
+
+                <ul class="main-middle-ul">
+                    <li><span class="ul-bt">[03]</span><span class="li-">韩国产MMO手游《TRAHA全球版》韩国内侧，为期七天</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">MMORPG手游《精灵M》发布插画 原作端游已运营20年</span></li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">韩服《艾尔之光》发布全新RAID“深渊的支配者兰”预告</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">长寿端游《卓越之剑》修改游戏界面，清凉夏装发布</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">吃瓜！动视旗下大作新皮肤翻车，被曝抄袭国内画师作品</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">可爱和性感！前《剑灵》主美新作《NIKKE》新小队</span> </li>
+                </ul>
+                <ul class="main-middle-ul">
+                    <li><span class="ul-bt">[03]</span><span class="li-">韩国产MMO手游《TRAHA全球版》韩国内侧，为期七天</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">MMORPG手游《精灵M》发布插画 原作端游已运营20年</span></li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">韩服《艾尔之光》发布全新RAID“深渊的支配者兰”预告</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">长寿端游《卓越之剑》修改游戏界面，清凉夏装发布</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">吃瓜！动视旗下大作新皮肤翻车，被曝抄袭国内画师作品</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">可爱和性感！前《剑灵》主美新作《NIKKE》新小队</span> </li>
+                </ul>
+                <p class="main-middle-a"><span class="main-middle-advertise">广告</span>仲夏流萤 天龙八部荣耀版7月送好礼</p>
+                <ul class="main-middle-ul">
+                    <li><span class="ul-bt">[03]</span><span class="li-">韩国产MMO手游《TRAHA全球版》韩国内侧，为期七天</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">MMORPG手游《精灵M》发布插画 原作端游已运营20年</span></li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">韩服《艾尔之光》发布全新RAID“深渊的支配者兰”预告</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">长寿端游《卓越之剑》修改游戏界面，清凉夏装发布</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">吃瓜！动视旗下大作新皮肤翻车，被曝抄袭国内画师作品</span> </li>
+                    <li><span class="ul-bt">[03]</span><span class="li-">可爱和性感！前《剑灵》主美新作《NIKKE》新小队</span> </li>
+                </ul>
+                <p class="main-middle-a"><span class="main-middle-advertise">广告</span>仲夏流萤 天龙八部荣耀版7月送好礼</p>
+
+                <ul class="main-middle-ul-s">
+                    <li><span class="ul-s-s">视频资讯</span><img class="ccgv" src="./image/ccgv.png" alt=""> <span
+                            class="ul-s-g">更多></span></li>
+                    <li><span class="ul-li-s">「热门话题」</span> <span class="ul-li-gg">|</span><span
+                            class="ul-li-ss">《诛仙世界》即将首测，你有什么期待吗？</span> </li>
+                    <li><img src="./image/main-middle-ul-s.png" alt=""><span class="ul-li-s">S级新游</span> <span
+                            class="ul-li-gg">|</span> <span class="ul-li-ss">《黎明之海》现已公测！送限定黑旗时装</span> </li>
+                    <li><img src="./image/main-middle-ul-s.png" alt=""><span class="ul-li-s">S级热点</span> <span
+                            class="ul-li-gg">|</span><span class="ul-li-ss">《暗黑：不朽》国服开了！现在就能进入游戏</span> </li>
+                    <li><img src="./image/main-middle-ul-s.png" alt=""><span class="ul-li-s">S级热点</span> <span
+                            class="ul-li-gg">|</span><span class="ul-li-ss">《流放之路》新资料片8月中旬登陆PC！</span> </li>
+                    <li><img src="./image/main-middle-ul-s.png" alt=""><span class="ul-li-s">S级热点</span> <span
+                            class="ul-li-gg">|</span><span class="ul-li-ss">《诛仙世界》首测时间确定，新战斗PV发布</span> </li>
+                </ul>
+
+            </div>
+
+            <div class="main-middle_right">
+                <div>
+                    <p> <span class="font-ss"></span> 手游期待榜</p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+let arr = [
+    {
+        lable:"热门",
+        imgSrc:"./image/logo.png"
+    },
+    {
+        lable:"新游",
+        imgSrc:"./image/advertisement-right.png"
+    },
+    {
+        lable:"手游",
+        imgSrc:"./image/advertisement-right.png"
+    },
+    {
+        lable:"网游",
+        imgSrc:"./image/advertisement-right.png"
+    },
+    {
+        lable:"按A-Z",
+        imgSrc:"./image/advertisement-right.png"
     }
+]
 
-    .header {
-        margin: 0 auto;
-        width: 70%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 80px;
-        margin-top: 10px;
+render(arr,"wrap-search_left","w-sl_item");
+
+tab("wrap-search_left");
+
+
+let  gameCollectionArr = [
+    {
+        title:"经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;典",
+        type:1,
+        value:""
+    },
+    {
+        title:"地下城勇士",
+        type:2,
+        value:""
+    },
+    {
+        title:"GM传:刀刀切割",
+        type:3,
+        value:""
     }
-
-    .header .header-r img {
-        width: 35px;
-        height: 39px;
-
+    ,
+    {
+        title:"魔兽世界",
+        type:3,
+        value:""
+    } ,
+    {
+        title:"梦幻西游",
+        type:3,
+        value:""
+    },
+    {
+        title:"魔域",
+        type:3,
+        value:""
+    },
+    {
+        title:"奇迹MU",
+        type:3,
+        value:""
     }
-
-    .header .header-r {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        color: rgb(105, 105, 105);
-        gap: 10px;
+    ,
+    {
+        title:"剑灵",
+        type:3,
+        value:""
+    },
+    {
+        title:"热血江湖",
+        type:3,
+        value:""
+    },
+    {
+        title:"笑傲江湖高清服",
+        type:3,
+        value:""
     }
-
-    .header .search input {
-        width: 320px;
-        height: 35px;
-        text-indent: 5px;
-        border-radius: 2px;
-        border: 1.5px solid #ffcd00;
-        outline: none;
+    ,
+    {
+        title:"剑网3",
+        type:3,
+        value:""
+    } ,
+    {
+        title:"英雄联盟",
+        type:3,
+        value:""
+    } ,
+    {
+        title:"新天龙八部",
+        type:3,
+        value:""
     }
+]
 
-    .header .search .search-icon {
-        width: 20px;
-        height: 20px;
+
+let  gameCollectionArr2 = [
+    {
+        title:"爆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;款",
+        type:1,
+        value:""
+    },
+    {
+        title:"开局招火凤",
+        type:2,
+        value:""
+    },
+    {
+        title:"流放之路",
+        type:3,
+        value:""
     }
-
-    .search-button {
-        position: relative;
-        top: 3.5px;
-        left: -5px;
-        width: 55px;
-        height: 40px;
-        background: #ffcd00;
-        border: none;
+    ,
+    {
+        title:"传奇4",
+        type:3,
+        value:""
+    } ,
+    {
+        title:"失落的泛舟",
+        type:3,
+        value:""
+    },
+    {
+        title:"神佑释放",
+        type:3,
+        value:""
+    },
+    {
+        title:"永恒之塔",
+        type:3,
+        value:""
     }
+]
 
-    .search-bottom .item{
-      margin-left: 3px;
-    }
 
-    .search-bottom{
-        margin-top: 5px;
-        font-size: 11px;
-    }
 
-    .wrap {
-        margin: 0 auto;
-        width: 70%;
-    }
-</style>
-
+renderGameCollection(gameCollectionArr);
+// renderGameCollection(gameCollectionArr2);
+</script>
 </html>

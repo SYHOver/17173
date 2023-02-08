@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .nav {
+        border-bottom: 3px solid #ffcd00;
+        width: 100%;
+        color: rgb(67, 67, 67);
+        font-size: 14px;
+    }
+
+    .nav-main {
+        margin: 0 auto;
+        width: 70%;
+        display: flex;
+        padding: 0;
+        min-width: 1100px;
+
+    }
+
+    .nav-m_l {
+        width: 90%;
+        display: flex;
+        padding: 10px 0;
+    }
+
+    .m-l_20 {
+        margin-left: 20px;
+    }
+
+    .mav-m_middle {
+        width: 10%;
+    }
+
+    .nav-m_r {
+        display: flex;
+        width: 20%;
+        padding: 10px 20px;
+
+    }
+</style>
+
+<body>
+    <nav class="nav">
+        <div class="nav-main">
+            <div class="nav-m_l">
+                <div class="m-l_20"></div>
+            </div>
+            <div class="nav-m_r">
+                <div class="m-l_20"></div>
+            </div>
+        </div>
+    </nav>
+</body>
+<script>
+    let list = [
+
+        {
+            id: 1,
+            label: "咨询中心",
+            type: 1,
+            value: "22"
+        }, {
+            id: 2,
+            label: "新游戏·今日开服",
+            type: 3,
+            value: ""
+        }, {
+            id: 3,
+            label: "游戏下载",
+            type: 3,
+            value: ""
+        }, {
+            id: 4,
+            label: "发号平台",
+            type: 3,
+            value: ""
+        }, {
+            id: 5,
+            label: "有料社区",
+            type: 2,
+            value: "./image/main-middle.gif"
+        }, {
+            id: 6,
+            label: "17173影视",
+            type: 2,
+            value: "./image/main-middle.gif"
+        }, {
+            id: 7,
+            label: "17173视频",
+            type: 3,
+            value: ""
+        }, {
+            id: 8,
+            label: "新页游 · 开测 · 开服",
+            type: 3,
+            value: ""
+        }
+    ]
+
+    let list1 = [
+        {
+            id: 9,
+            label: "H5小游戏",
+            type: 3,
+            value: ""
+        }, {
+            id: 10,
+            label: "网页游戏",
+            type: 2,
+            value: "./image/add.png"
+        }
+    ]
+
+    class Nav {
+        constructor(option) {
+            this.navEl = document.querySelector(option.el);;
+            this.list = option.list;
+            this.childEl = option.childEl;
+            this.render();
+        }
+        getChilElTemplate() {
+            let childEl = this.childEl ? this.navEl.querySelector(this.childEl) : document.createElement('div');
+            return childEl.cloneNode(true);
+        }
+        createImage(imgObj) {
+            let image = new Image(imgObj.width || 10, imgObj.height || 10);
+            image.src = imgObj.imgSrc;
+            return image;
+        }
+        createFont(font) {
+            let span = document.createElement("span");
+            span.innerHTML = font;
+            span.style.cssText = `
+              height:16px;
+              width:18px;
+              background:red;
+              font-size:12px;
+              border-radius:50px;
+              color:#ffff;
+              text-align:center;
+              margin-top:-5px;
+            `
+            return span;
+        }
+        addBadge(item) {
+            if (item.type == 2) {
+                let img = this.createImage({ imgSrc: item.value })
+                this.navEl.appendChild(img);
+            } else if (item.type == 1) {
+                this.navEl.appendChild(this.createFont(item.value));
+            }
+        }
+        render() {
+            this.list.forEach(item => {
+                let templateChild = this.getChilElTemplate();
+                templateChild.textContent = item.label;
+                this.navEl.appendChild(templateChild);
+                this.addBadge(item);
+            });
+        }
+    }
+    new Nav({
+        el: ".nav-m_l",      //要渲染的el
+        childEl: ".m-l_20",  //渲染的el下面的元素  如果不填默认创建一个div进行渲染
+        list,                //要渲染的数据  [{ id , label , img 图标 }]
+    })
+
+    new Nav({
+        el: ".nav-m_r",
+        childEl: ".m-l_20",
+        list: list1,
+    })
+</script>
+
+</html>

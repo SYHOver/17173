@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .p {
+        padding:15px 25px;
+    }
+
+    .c-main div{
+        padding-top: 15px;
+  
+    }
+
+    .c-main{
+        margin-top: 10PX;
+        background: rgb(247, 247, 247);
+        border-radius: 5px;
+        font-size: 15PX;
+        color: RED;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .header {
+        height: 42vh;
+        background-image: url("../image/qq.png");
+        background-size: 100%;
+    }
+</style>
+
+<body>
+    <div class="app">
+        <div class="header">
+        </div>
+        <template>
+            <div class="p">
+                <div class="c-main display-none"></div>
+            </div>
+        </template>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+<script>
+    var groups = [
+        {
+            id: 1,  // 组id;
+            name: '我的好友'
+        },
+        {
+            id: 2,
+            name: '红颜知己'
+        },
+        {
+            id: 3,
+            name: '哈哈家庭'
+        }
+    ]
+
+    var arr = [
+        {
+            id: 1,  //好友id;
+            group: 1,  // 组id;
+            avatarName: '哎哟,不错哟', // 网名;
+            description: '',  //描述
+            remark: '',  //备注
+            lastContactTime: '1660995403512', // 上次联系时间
+            onlineStatus: 1,  // 1 : 在线,  0: 离线
+            article: [
+                {
+                    articleId: 1231,  //文章id;
+                    createTime: 1660995000000,  //文章创建时间
+                    type: 1,  // 1 : 空间文章,  2: 说说;
+                }
+            ]
+        },
+        {
+            id: 2,  //好友id;
+            group: 2,  // 组id;
+            avatarName: '~...~', // 网名;
+            description: '只要专业选的好～年年期末像高考',  //描述
+            remark: '盖腾飞',  //备注
+            lastContactTime: '1660995203512', // 上次联系时间
+            onlineStatus: 0,  // 1 : 在线,  0: 离线
+            article: []
+        },
+        {
+            id: 3,  //好友id;
+            group: 3,  // 组id;
+            avatarName: '林子', // 网名;
+            description: '近陌者黑,生人勿加',  //描述
+            remark: '侯林',  //备注
+            lastContactTime: '1660995413512', // 上次联系时间
+            onlineStatus: 1,  // 1 : 在线,  0: 离线
+            article: []
+        },
+        {
+            id: 4,  //好友id;
+            group: 1,  // 组id;
+            avatarName: '禁止偷猪', // 网名;
+            description: '',  //描述
+            remark: '',  //备注
+            lastContactTime: '1660995413512', // 上次联系时间
+            onlineStatus: 0,  // 1 : 在线,  0: 离线
+            article: []
+        },
+        {
+            id: 5,  //好友id;
+            group: 2,  // 组id;
+            avatarName: '禁止偷猪', // 网名;
+            description: '是做一世的逗逼还是暂时的聪明人？',  //描述
+            remark: '范文峰',  //备注
+            lastContactTime: '1660915413512', // 上次联系时间
+            onlineStatus: 0,  // 1 : 在线,  0: 离线
+            article: []
+        },
+        {
+            id: 6,  //好友id;
+            group: 2,  // 组id;
+            avatarName: '蓝白白', // 网名;
+            description: '一天二次元,一生二次元,为二次元而活',  //描述
+            remark: '',  //备注
+            lastContactTime: '', // 上次联系时间
+            onlineStatus: 1,  // 1 : 在线,  0: 离线
+            article: []
+        },
+        {
+            id: 6,  //好友id;
+            group: 3,  // 组id;
+            avatarName: '格勒冇三', // 网名;
+            description: '得之坦然，失之淡然，争其必然，顺其自然',  //描述
+            remark: '凯哥',  //备注
+            lastContactTime: '', // 上次联系时间
+            onlineStatus: 1,  // 1 : 在线,  0: 离线
+            article: [
+                {
+                    articleId: 1231,  //文章id;
+                    createTime: 1660995000000,  //文章创建时间
+                    type: 1,  // 1 : 空间文章,  2: 说说;
+                },
+                {
+                    articleId: 1237,  //文章id;
+                    createTime: 1660995412000,  //文章创建时间
+                    type: 2,  // 1 : 空间文章,  2: 说说;
+                },
+            ]
+        },
+        {
+            id: 7,  //好友id;
+            group: 1,  // 组id;
+            avatarName: 'hi! world', // 网名;
+            description: '程序员是最浪漫的职业',  //描述
+            remark: '',  //备注
+            lastContactTime: '', // 上次联系时间
+            onlineStatus: 1,  // 1 : 在线,  0: 离线
+            article: [
+                {
+                    articleId: 1237,  //文章id;
+                    createTime: 1660995412000,  //文章创建时间
+                    type: 2,  // 1 : 空间文章,  2: 说说;
+                },
+            ]
+        },
+    ]
+
+
+
+    let qq = new MemberList({
+        el: ".app",
+        groups,
+        arr
+    })
+</script>
+
+</html>

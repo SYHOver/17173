@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+
+        <!-- 组件封装的维度  如果placeholder传的是一个字符串,则直接将placeholder展示到页面上 -->
+    <!-- 如果placeholder传的是一个数组,则默认1.5s轮询 -->
+    <!-- placeholder: ['梦幻西游','魔兽世界','暗黑:不朽','天龙八部手游'] -->
+    <!-- placeholder:'梦幻西游' -->
+    <!-- 如果设置参数duration = '500'  则将 1.5s 改成 500ms  -->
+    <!-- <el-search  :placeholder="placeholder"  duration="500"></el-search> -->
+    <div id="app">
+        <el-search :placeholders="placeholder" duration="500"></el-search>
+    </div>
+</body>
+
+<script>
+    Vue.component('el-search', {
+        props: ['placeholders',"duration"],
+        template: "<input type='text' :placeholder='strplaceholder || placeholder'>",
+        data(){
+            return{
+                index: 0,
+                strplaceholder:"",
+            }
+        },
+        computed: {
+            placeholder() {
+                return this.placeholders[this.index];
+            }
+        },
+        mounted() {
+                if(typeof(this.placeholders=='string') && this.placeholders.constructor==String){
+                    this.strplaceholder = this.placeholders;
+                }else{
+                    setInterval(() => {
+                        this.index = this.index >= this.placeholders.length - 1 ? 0 : this.index + 1;
+                    }, this.duration || 1500)
+                }
+            
+        }
+    });
+
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            placeholder:['梦幻西游','魔兽世界','暗黑:不朽','天龙八部手游'],
+        }
+    });
+</script>
+
+</html>

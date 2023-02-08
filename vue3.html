@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div v-html="subTitle">{{ title }}</div>
+        <div v-html="title">{{ title }}</div> -->
+        <div v-bind:id="dynamicId" v-bind:username="username" v-bind:age="age"></div>
+    </div>
+</body>
+
+<script src="./vue.js"></script>
+<script>
+//  const App = {
+//     data(){
+//         return {
+//             title: '<h1>这是一个标题</h1>',
+//             subTitle:'<h2>二级标题</h2>'
+//         }
+//     }
+// }
+// createApp(App).mount("#app")
+
+const App = {
+        data(){
+            return {
+                dynamicId:'user',
+                username:'xiaoming',
+                age: 18
+            }
+        },
+    }
+    createApp(App).mount("#app");
+
+</script>
+
+</html>

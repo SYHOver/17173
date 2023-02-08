@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    请猜数： <input class="input" type="text"> <button onclick="submit()">确定</button>
+
+    <div>上次猜的数：<span class="current-number"></span></div>
+    <div class="err">你猜错了！</div>
+    <div class="low">刚才你猜低了!</div>
+</body>
+<style>
+</style>
+<script>
+    var num = Math.floor(Math.random() * (100 - 1) + 1);
+    function submit() {
+        let gameCount = 1;
+        gameCount++;
+        console.log(gameCount);
+        let err = document.querySelector(".err");
+        let lwo = document.querySelector(".low");
+        let input = document.querySelector(".input").value;
+        err.style.cssText = "";
+        lwo.style.cssText = ""
+        document.querySelector(".current-number").textContent = input;
+        if (input > num) {
+            err.style.cssText = `background:red;`;
+        } else if (input < num) {
+            lwo.style.cssText = `background:red;`;
+        } else if (game==10){
+            alert("游戏结束")
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        height: 100vh;
+        width: 100%;
+        background-image: url("image/ad-mobile.png");
+        background-size: 100% 100%;
+    }
+
+    .num {
+        padding: 10px;
+        float: right;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <!-- <div class="main">
+            <span class="num">{{index}}</span>
+        </div> -->
+
+
+     <div  class="aaa" v-html="msg">
+
+     </div>
+
+    </div>
+    
+</body>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            index: 3,
+            msg:"<h1>66666</h1>"
+        },
+    //     mounted() {
+    //         this.bt();
+    //     },
+    //     methods: {
+    //         bt() {
+    //             setTimeout(() => {
+    //                 this.index--;
+    //                 this.index == 0 ? window.location.replace('home.html') : this.bt();
+    //             }, 1000);
+    //         }
+    //     }
+    });
+</script>
+
+[</html>]

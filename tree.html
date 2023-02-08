@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    let data = [
+        {
+            title: "01",
+
+        },{
+            title: "0101",
+
+        },{
+            title: "010101",
+
+        },{
+            title: "010102",
+        }, {
+            title: "02",
+
+        } , {
+            title: "0201",
+
+        }
+    ]
+    
+
+
+
+    data.forEach(itme => {
+        itme.grade = (`${itme.title}`).length / 2;
+    })
+    data.forEach(itme => {
+        itme.child = data.filter(child => {
+            if (child.grade - 1 == itme.grade && child.title.substring(0, 2) == itme.title.substring(0, 2)) {
+                return child;
+            }
+        })
+    })
+    let newarr = data.filter(itme => {
+        return itme.grade == 1;
+    })
+    console.log(newarr);
+
+
+
+</script>
+
+</html>

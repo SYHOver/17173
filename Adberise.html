@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./adverise.js"></script>
+</head>
+<style>
+    .first-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+    <div class="first-box">
+        <div id="first-screen"></div>
+    </div>
+    <div id="banner"></div>
+</body>
+
+<script>
+
+    // let banner = new BannerAdverise({
+    //     el: "#banner",
+    //     imgUrl: '',
+    //     duration: 3000,
+    //     imgUrl: './image/game-video1.png',
+    //     width: 300,
+    //     height: 600,
+    //     mounted(){
+    //       console.log("mounted");
+    //     }
+    // })
+
+    // banner.exec();
+
+    let firtScreen = new FirstScreenAdverise({
+        el: '#first-screen',
+        imgUrl: 'https://s.17173cdn.com/if/video/youliang/2022/08/16-0052208/dt.png',
+        duration: 6000, // 广告的持续时间
+        width: 400,
+        height: 500,
+    })
+    firtScreen.afterClosed = function(){
+        console.log(1);
+        new BannerAdverise({
+        el: "#banner",
+        imgUrl: '',
+        duration: 3000,
+        imgUrl: './image/game-video1.png',
+        width: 300,
+        height: 600,
+    })
+    }
+
+
+
+
+
+</script>
+
+</html>
